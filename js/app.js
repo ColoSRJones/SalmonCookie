@@ -1,13 +1,14 @@
 'use strict';
-
+//Data ==========================================
 var operationHour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 var allcookieshops = [];
-
+//Get cookie sold to table 
 var cookieshopTable = document.getElementById('cookies-sold');
-
+//Get to add shop to form
 var cookieShopForm = document.getElementById('add-shop-form');
-
+//funmctionally ==================================
+//Constructor for store sales data
 function CookieShop(location, minCust, maxCust, cookiesPerSale) {
   this.location = location;
   this.minCust = minCust;
@@ -26,7 +27,7 @@ CookieShop.prototype.cookiesPerHr = function () {
   return Math.round(this.cookiesPerSale * this.custPerHr());
 };
 
-CookieShop.prototype.render = function() { // Render Function
+CookieShop.prototype.render = function() { 
   var trElement = document.createElement('tr');
   var thElement = document.createElement('th');
   thElement.textContent = this.location;
@@ -99,7 +100,7 @@ function totalCookiesPerHour() { // Bottom Totals
   trElement.appendChild(tdElement);
   cookieshopTable.appendChild(trElement);
 }
-
+//Calls function to generate arrays with random number of cookies
 new CookieShop('First and Pike', 23, 65, 6.3);
 new CookieShop('SeaTac', 3, 24, 1.2);
 new CookieShop('Seattle Center', 11, 38, 3.7);
