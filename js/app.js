@@ -1,10 +1,10 @@
 'use strict';
 
-var operationTime = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var operationHour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-var allShops = [];
+var allcookieshops = [];
 
-var cookiesTable = document.getElementById('cookies-sold');
+var cookieshopTable = document.getElementById('cookies-sold');
 
 var cookieShopForm = document.getElementById('add-shop-form');
 
@@ -14,7 +14,7 @@ function CookieShop(location, minCust, maxCust, cookiesPerSale) {
   this.maxCust = maxCust;
   this.cookiesPerSale = cookiesPerSale;
   this.cookiesSoldPerHr = [];
-  allShops.push(this);
+  allcookieshops.push(this);
 
 }
 
@@ -35,7 +35,7 @@ CookieShop.prototype.render = function() { // Render Function
   var cookiesSold = 0;
   var totalCookiesSold = 0;
 
-  for (var i = 0; i < operationTime.length; i++) {
+  for (var i = 0; i < operationHour.length; i++) {
 
     cookiesSold = this.cookiesPerHr();
 
@@ -51,7 +51,7 @@ CookieShop.prototype.render = function() { // Render Function
   tdElement = document.createElement('td');
   tdElement.textContent = totalCookiesSold;
   trElement.appendChild(tdElement);
-  cookiesTable.appendChild(trElement);
+  cookieshopTable.appendChild(trElement);
 };
 
 function makeHeaderRow() { // Header Row Function
@@ -61,9 +61,9 @@ function makeHeaderRow() { // Header Row Function
   thElement.textContent = '';
   trElement.appendChild(thElement);
 
-  for (var i = 0; i < operationTime.length; i++) {
+  for (var i = 0; i < operationHour.length; i++) {
     thElement = document.createElement('th');
-    thElement.textContent = operationTime[i];
+    thElement.textContent = operationHour[i];
     trElement.appendChild(thElement);
   }
 
@@ -72,7 +72,7 @@ function makeHeaderRow() { // Header Row Function
   trElement.appendChild(thElement);
   theadElement.appendChild(trElement);
 
-  cookiesTable.appendChild(theadElement);
+  cookieshopTable.appendChild(theadElement);
 }
 
 function totalCookiesPerHour() { // Bottom Totals
@@ -83,11 +83,11 @@ function totalCookiesPerHour() { // Bottom Totals
 
   var grandTotalCookies = 0;
 
-  for (var i = 0; i < operationTime.length; i++) {
+  for (var i = 0; i < operationHour.length; i++) {
     var totalCookies = 0;
-    for( var j = 0; j < allShops.length; j++) {
-      totalCookies += allShops[j].cookiesSoldPerHr[i];
-      grandTotalCookies += allShops[j].cookiesSoldPerHr[i];
+    for( var j = 0; j < allcookieshops.length; j++) {
+      totalCookies += allcookieshops[j].cookiesSoldPerHr[i];
+      grandTotalCookies += allcookieshops[j].cookiesSoldPerHr[i];
     }
     var tdElement = document.createElement('td');
     tdElement.textContent = totalCookies;
@@ -97,7 +97,7 @@ function totalCookiesPerHour() { // Bottom Totals
   tdElement = document.createElement('td');
   tdElement.textContent = grandTotalCookies;
   trElement.appendChild(tdElement);
-  cookiesTable.appendChild(trElement);
+  cookieshopTable.appendChild(trElement);
 }
 
 new CookieShop('First and Pike', 23, 65, 6.3);
@@ -106,13 +106,13 @@ new CookieShop('Seattle Center', 11, 38, 3.7);
 new CookieShop('Capitol Hill', 20, 38, 2.3);
 new CookieShop('Alki', 2, 16, 4.6);
 
-function renderAllShops() {
-  for(var i in allShops) {
-    allShops[i].render();
+function renderallcookieshops() {
+  for(var i in allcookieshops) {
+    allcookieshops[i].render();
   }
 }
 // event listener's callback funtion
-function addNewShop(event) {
+function addNewCookieShop(event) {
   event.preventDefault();
   console.log(event);
   console.log(event.target);
@@ -125,14 +125,14 @@ function addNewShop(event) {
 
   new CookieShop(newLoc, newMinCust, newMaxCust, newCookiesPerSale);
 
-  cookiesTable.innerHTML = '';
+  cookieshopTable.innerHTML = '';
   makeHeaderRow();
-  renderAllShops();
+  renderallcookieshops();
   totalCookiesPerHour();
 }
 
-cookieShopForm.addEventListener('submit', addNewShop);
+cookieShopForm.addEventListener('submit', addNewCookieShop);
 
 makeHeaderRow();
-renderAllShops();
+renderallcookieshops();
 totalCookiesPerHour();
