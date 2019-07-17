@@ -111,26 +111,31 @@ function renderallcookieshops() {
     allcookieshops[i].render();
   }
 }
-// event listener's callback funtion
+// code to add new shop 
 function addNewCookieShop(event) {
   event.preventDefault();
   console.log(event);
   console.log(event.target);
   console.log(event.target.shopLocation);
-  console.log(event.target.shopLocation.value);
-  var newLoc = event.target.shopLocation.value;
+  console.log
+  // Get target of event 
+  (event.target.shopLocation.value);
+  var newLoc = 
+  //The parseInt() function parses a string and returns an integer.
+  event.target.shopLocation.value;
   var newMinCust = parseInt(event.target.minCust.value);
   var newMaxCust = parseInt(event.target.maxCust.value);
   var newCookiesPerSale = parseInt(event.target.cookiesPerSale.value);
-
+// New Keyword to call to function creates a new object
   new CookieShop(newLoc, newMinCust, newMaxCust, newCookiesPerSale);
 
+// Access & Update text with TextContent to Table 
   cookieshopTable.innerHTML = '';
   makeHeaderRow();
   renderallcookieshops();
   totalCookiesPerHour();
 }
-
+//Event Listener to Form
 cookieShopForm.addEventListener('submit', addNewCookieShop);
 
 makeHeaderRow();

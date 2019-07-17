@@ -34,6 +34,7 @@ em {
 div {
   display: block;
 }
+/* Header */
 header.home {
   background-attachment: fixed;
   background-image: url(https://images.unsplash.com/photo-1470645792662-dd18394f8c97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
@@ -69,6 +70,7 @@ header.top-head {
   width:100vw;
   z-index: 5;
 }
+/* Section */
 section.full-width {
   position: relative;
   height:150vh;
@@ -78,6 +80,7 @@ section.full-width {
   box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.2);
   overflow: auto;
 }
+/* Nav */
 nav.fixed-side {
   position: fixed;
   top: 40vh;
@@ -130,6 +133,7 @@ nav.top li::before {
   border-left: solid 1px white;
   height: 80%;
 }
+/* Logo */
 div.fp-logo-container {
   position: absolute;
   left: 0;
@@ -156,6 +160,7 @@ div.top-logo-container img {
   width:60px;
   vertical-align: middle;
 }
+/* Text Style */
 div.fp-text-container, div.top-text-container {
   display:inline-block;
   vertical-align: middle;
@@ -174,6 +179,7 @@ div.top-text-container h1{
 div.top-text-container h2 {
   font-size: .75em;
 }
+/* Background of section */
 #locations {
   background: darkgray;
 }
@@ -183,6 +189,7 @@ div.top-text-container h2 {
 #sales {
   background: black;
 }
+/* Section 2 */
 section.full-width h3 {
   text-align: center;
   padding: 5px;
@@ -194,6 +201,7 @@ section.full-width p {
   margin: 20px 25%;
   line-height: 1.5em;  
 }
+/* Locaton */
 div.location-entry {
   text-align: center;
   display: inline-block;
@@ -239,6 +247,7 @@ div.text-container {
 section.sticky-nav {
   padding-top:100px;
 }
+/* Table style */
 table {
   background-color: black;
   border-radius: 15px;
@@ -287,11 +296,11 @@ table tr:nth-last-child(1) td:nth-last-child(1) {
 .active {
   color:gray;
 }
+/* Form */
 legend {
   color: white;
   font-family: oswald;
   font-size: 1.2em;
-  /* text-decoration: underline; */
   text-align: left;
 }
 fieldset {
@@ -306,9 +315,7 @@ label {
   color: white;
 }
 button {
-  
   display: block;
-
   margin: 0 auto;
 }
 label, input {
