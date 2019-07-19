@@ -46,21 +46,16 @@ header.home {
   height: 500px;
   overflow: hidden;
   position: relative;
-  width 100%;
-  
+  width: 100%;
 }
 header.home::before {
-  background;
-  content: '';
   height: 100vh;
   position: absolute;
   top: 0;
   bottom:0;
   right: 0;
   left: 0;
-  opacity:.4;
   width:100vw;
-  
 }
 header.top-head {
   background: black;
@@ -76,7 +71,6 @@ section.full-width {
   position: relative;
   height:150vh;
   width:100vw;
-  background: gray;
   text-align:center;
   box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.2);
   overflow: auto;
@@ -183,20 +177,23 @@ div.top-text-container h2 {
 /* Background of section */
 #locations {
   background: darkgray;
+  height: 1200px;
 }
 #about {
-  background: black;
+  background: darkslategray;
+  height: 900px;
 }
 #sales {
   background: black;
+  height: 250px;
 }
 /* Section 2 */
 section.full-width h3 {
   text-align: center;
   padding: 5px;
   border-bottom: solid 1px white;
-  width: 15%;
-  margin: 0 auto;
+  width: 25%;
+  margin: auto;
 }
 section.full-width p {
   margin: 20px 25%;
@@ -234,6 +231,7 @@ div.social-icons {
   padding: 5px;
 }
 div.text-container {
+  margin-top: 15px;
   position: absolute;
   top: 50%;
   left: 0;
@@ -241,9 +239,8 @@ div.text-container {
   transform: translateY(-50%);
 }
 #sales a {
-  color: gray;
-  display:block;
-  margin:10px;
+  color: salmon;
+  margin: auto;
 }
 section.sticky-nav {
   padding-top:100px;

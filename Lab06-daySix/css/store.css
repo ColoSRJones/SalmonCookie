@@ -1,0 +1,62 @@
+body{
+	text-align: center;
+	background-color: salmon;
+}
+.box{
+  margin-top: 200px;
+  display: block;
+  box-sizing: content-box;
+  width: 700px;
+  height: 1600px;
+  background-color: silver;
+  border: 5px solid white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5%;
+}
+
+.productpic {
+  display: block; 
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-image: cover;
+  border-radius: 10%;
+}
+
+.center{
+  color: #ffffff;
+  background-color: #1a0000;
+  align: center;
+  border: 10px solid white;
+  padding: 25px;
+  margin: 25px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.under-text{
+  font-weight: bolder;
+  font-size: 26px;
+  color: black;
+}
+
+.under-box{
+  background-color: white;
+  box-sizing: content-box;
+  text-align:center;
+  vertical-align:middle;
+  width:500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+form{
+	display: inline block;
+	margin-left: 25%;
+    margin-right:25%;
+    width: 50%;
+}
