@@ -92,7 +92,7 @@ nav.top li::before {
   top:4px;
   left:0;
   bottom:0;
-  border-left: solid 1px white;
+  border-left: solid 3px white;
   height: 80%;
 }
 /* Logo */
