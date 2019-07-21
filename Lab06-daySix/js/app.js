@@ -18,7 +18,8 @@ function CookieShop(location, minCust, maxCust, cookiesPerSale) {
   allcookieshops.push(this);
 
 }
-
+//Testing Error on CookiesShop
+debugger;
 CookieShop.prototype.custPerHr = function () {
   return Math.ceil(Math.random() * ((this.maxCust) - (this.minCust)) + this.minCust);
 };

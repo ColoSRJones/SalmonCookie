@@ -113,6 +113,7 @@ div.top-text-container h2 {
 #locations {
   background: darkgray;
   height: 1200px;
+  box-shadow: 0 4px 2px -2px gray;
 }
 .family {
 	margin-top: 400px;
